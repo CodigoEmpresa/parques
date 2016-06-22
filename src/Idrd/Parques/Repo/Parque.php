@@ -16,4 +16,9 @@ class Parque extends Eloquent {
 		$this->connection = config('parques.conexion');
 	}
 
+	public function tipo()
+	{
+		return $this->belongsTo(config('parques.modelo_tipo'), 'Id_Tipo');
+	}
+
 }
