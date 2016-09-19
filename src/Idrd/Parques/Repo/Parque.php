@@ -21,4 +21,14 @@ class Parque extends Eloquent {
 		return $this->belongsTo(config('parques.modelo_tipo'), 'Id_Tipo');
 	}
 
+	public function localidad()
+	{
+		return $this->belongsTo(config('parques.modelo_localidad'), 'Id_Localidad');
+	}
+
+	public function upz()
+	{
+		return $this->belongsTo(config('parques.modelo_upz'), 'Id_Upz');
+	}
+
 }
