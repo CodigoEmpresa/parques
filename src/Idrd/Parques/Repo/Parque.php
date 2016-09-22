@@ -28,7 +28,7 @@ class Parque extends Eloquent {
 
 	public function upz()
 	{
-		return $this->belongsTo(config('parques.modelo_upz'), 'Id_Upz');
+		return $this->belongsTo(config('parques.modelo_upz'), 'Upz');
 	}
 
 }

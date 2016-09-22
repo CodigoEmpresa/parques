@@ -20,11 +20,16 @@ class Upz extends Eloquent {
 
 	public function localidad()
 	{
-		return $this->belongsTo(config('parques.modelo_localidad'), 'Id_Localidad');
+		return $this->belongsTo(config('parques.modelo_localidad'), 'IdLocalidad');
 	}
 
 	public function parques()
 	{
-		return $this->hasMany(config('parques.modelo_parque'), 'Id_Upz');
+		return $this->hasMany(config('parques.modelo_parque'), 'Upz');
+	}
+
+	public function barrio()
+	{
+		return $this->hasMany(config('parques.modelo_barrio'), 'CodUpz');
 	}
 }

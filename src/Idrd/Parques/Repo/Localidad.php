@@ -25,6 +25,6 @@ class Localidad extends Eloquent {
 
 	public function upz()
 	{
-		return $this->hasMany(config('parques.modelo_upz'), 'Id_Localidad');
+		return $this->hasMany(config('parques.modelo_upz'), 'IdLocalidad');
 	}
 }
