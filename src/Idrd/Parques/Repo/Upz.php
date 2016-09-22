@@ -28,7 +28,7 @@ class Upz extends Eloquent {
 		return $this->hasMany(config('parques.modelo_parque'), 'Upz');
 	}
 
-	public function barrio()
+	public function barrios()
 	{
 		return $this->hasMany(config('parques.modelo_barrio'), 'CodUpz');
 	}
