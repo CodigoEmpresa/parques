@@ -20,6 +20,6 @@ class Barrio extends Eloquent {
 
 	public function upz()
 	{
-		return $this->belongsTo(config('parques.modelo_upz'), 'CodUpz');
+		return $this->belongsTo(config('parques.modelo_upz'), 'CodUpz', 'cod_upz');
 	}
 }

@@ -4,6 +4,7 @@ namespace Idrd\Parques;
 
 use Illuminate\Support\ServiceProvider;
 use Idrd\Parques\Repo\EloquentParque;
+use Idrd\Parques\Repo\EloquentLocalizacion;
 
 class ParquesServiceProvider extends ServiceProvider
 {
@@ -37,8 +38,14 @@ class ParquesServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app->bind('Idrd\Parques\Repo\ParqueInterface',function($app){
+		$this->app->bind('Idrd\Parques\Repo\ParqueInterface',function($app)
+		{
 			return new EloquentParque($app);
+		});
+
+		$this->app->bind('Idrd\Parques\Repo\LocalizacionInterface',function($app)
+		{
+			return new EloquentLocalizacion($app);
 		});
 	}
 
