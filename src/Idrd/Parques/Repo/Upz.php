@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Config as Config;
 class Upz extends Eloquent {
 	
 	protected $table = 'upz';
-	protected $primaryKey = 'Id_Upz';
+	protected $primaryKey = 'cod_upz';
 	protected $fillable = ['Upz', 'cod_upz'];
 	protected $connection = '';
 	public $timestamps = false;
