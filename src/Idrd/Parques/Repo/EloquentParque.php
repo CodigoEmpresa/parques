@@ -18,7 +18,7 @@ class EloquentParque implements ParqueInterface {
 	{
 		$model = $this->model();
 
-		return $model->whereRaw('CONCAT (Nombre, " ", Id_IDRD) LIKE "%'.$key.'%"', array())
+		return $model->with('upz', 'localidad', 'tipo')->whereRaw('CONCAT (Nombre, " ", Id_IDRD) LIKE "%'.$key.'%"', array())
 					->orderBy('Nombre', 'asc')
 					->get();
 	}
