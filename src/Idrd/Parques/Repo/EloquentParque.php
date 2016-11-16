@@ -35,11 +35,10 @@ class EloquentParque implements ParqueInterface {
 	{
 		$model = $this->model();
 		return $model->with('upz', 'localidad', 'tipo', 'dotaciones')
-					->where('Id_Parque', $id_parque)
-					->first();
+					->find($id_parque);
 	}
 
-	public function obtenerTipo($id_tipo){
+	public function obtenerPorTipo($id_tipo){
 		$model = $this->model();
 		return $model->with('upz', 'localidad', 'tipo', 'dotaciones')
 					->where('Id_Tipo', $id_tipo)
