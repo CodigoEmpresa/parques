@@ -11,4 +11,9 @@ interface ParqueInterface {
 	 */
 	public function buscar($key);
 
+	/**/
+	public function todos();
+
+	/**/
+	public function obtener($id_parque);
 } 
