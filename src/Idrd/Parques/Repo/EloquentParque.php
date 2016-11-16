@@ -39,6 +39,13 @@ class EloquentParque implements ParqueInterface {
 					->first();
 	}
 
+	public function obtenerTipo($id_tipo){
+		$model = $this->model();
+		return $model->with('upz', 'localidad', 'tipo', 'dotaciones')
+					->where('Id_Tipo', $id_tipo)
+					->first();
+	}
+
 	private function model()
 	{
 		$this->model = $this->app['config']->get('parques.modelo_parque');

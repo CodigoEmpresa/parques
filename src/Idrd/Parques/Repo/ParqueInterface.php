@@ -16,4 +16,7 @@ interface ParqueInterface {
 
 	/**/
 	public function obtener($id_parque);
+
+	/**/
+	public function obtenerTipo($id_parque);
 } 
