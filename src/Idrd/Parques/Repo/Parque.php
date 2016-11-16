@@ -31,4 +31,9 @@ class Parque extends Eloquent {
 		return $this->belongsTo(config('parques.modelo_upz'), 'Upz');
 	}
 
+	public function dotaciones()
+	{
+		return $this->belongsToMany(config('parques.modelo_dotacion'), 'parquedotacion','Id_Parque','Id_Dotacion')
+					->withPivot('Num_Dotacion', 'Estado', 'Material', 'iluminacion', 'Aprovechamientoeconomico', 'Area', 'MaterialPiso', 'Cerramiento', 'Camerino', 'Luz', 'Agua', 'Gas', 'Capacidad', 'Carril', 'Bano', 'BateriaSanitaria', 'Descripcion', 'Diag_Mantenimiento', 'Diag_Construcciones', 'Posicionamiento', 'Destinacion', 'Imagen', 'Fecha', 'TipoCerramiento', 'AlturaCerramiento', 'Largo', 'Ancho', 'Cubierto', 'Dunt', 'B_Masculino', 'B_Femenino', 'B_Discapacitado', 'C_Vehicular', 'C_BiciParqueadero', 'Publico');
+	}
 }
