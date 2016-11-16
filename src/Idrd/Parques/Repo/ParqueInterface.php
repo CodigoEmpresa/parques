@@ -19,4 +19,8 @@ interface ParqueInterface {
 
 	/**/
 	public function obtenerPorTipo($id_tipo);
+
+
+	/**/
+	public function grandesEscenarios();
 } 
